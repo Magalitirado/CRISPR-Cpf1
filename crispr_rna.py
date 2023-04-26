@@ -34,7 +34,4 @@ def search_cpf1_rna(file):
                 for pos in motif_positions:
                     if pos > mini and pos < maxi:
                         results.write(str(pos)+'\t'+genomic_sequence[pos:pos+28]+'\n')
-
-search_cpf1_rna('streptomyces_ambofaciens_03.txt')         
-
    
