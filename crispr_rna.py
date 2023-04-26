@@ -18,7 +18,9 @@ def search_cpf1_rna(file):
         # Get motifs
         motifs = ['tta','ttc','ttg']
     
-            # Find all occurrences of the motif in the genomic sequence
+        # Find all occurrences of the motif in the genomic sequence
+        mini = int(input('Where to begin:'))
+        maxi = int(input('Where to stop:'))
         for motif in motifs:
             results.write(motif.upper()+'\n\n')
             motif_positions = []
@@ -30,7 +32,7 @@ def search_cpf1_rna(file):
             # Print out the results
             if len(motif_positions) > 0:
                 for pos in motif_positions:
-                    if pos > 7800000 and pos < 7802500:
+                    if pos > mini and pos < maxi:
                         results.write(str(pos)+'\t'+genomic_sequence[pos:pos+28]+'\n')
 
 search_cpf1_rna('streptomyces_ambofaciens_03.txt')         
