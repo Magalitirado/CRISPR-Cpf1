@@ -5,7 +5,7 @@ Created on Mon Mar 27 13:30:50 2023
 @author: Pro
 """
 
-def search_cpf1_rna(file):
+def search_cpf1_grna(file):
     # Open the genomic text file
     with open(file, 'r',) as gen_file:
         
